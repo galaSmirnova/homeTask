@@ -2,16 +2,16 @@ let menu = document.querySelector(".menu"),
     menuItem = document.querySelectorAll(".menu-item"),
     title = document.querySelector(".title"),
     ask = document.getElementById("prompt"),
-    div = document.querySelectorAll("column"),
-    adv = document.getElementsByClassName("adv");
+    column = document.querySelectorAll("div"),
+    adv = document.querySelector(".adv");
 
 
 
 
-menu.replaceChild(menuItem[2], menuItem[1]);
+// menu.replaceChild(menuItem[2], menuItem[1]);
+menu.insertBefore(menuItem[2], menuItem[1]);
 
-let li = document.createElement("li");
-    
+let li = document.createElement("li");    
 
 menu.appendChild(li);
 li.classList.add('menu-item');
@@ -21,7 +21,9 @@ document.body.style.backgroundImage = 'url(img/apple_true.jpg)';
 
 title.textContent = "Мы продаем только подлинную технику Apple";
 
-// let answ = prompt("Как вы относитесь к технике apple?");
+adv.parentElement.removeChild(adv);
 
-// ask.textContent = answ;
+let answ = prompt("Как вы относитесь к технике apple?");
+
+ask.textContent = answ;
 
